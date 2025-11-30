@@ -16,7 +16,8 @@ class _ChangeRateState extends State<ChangeRate> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFF1E1E1E),
-      body: Column(
+      body: SingleChildScrollView(
+        child:Column(
         children: [
           SizedBox(
             height: 30,
@@ -62,6 +63,7 @@ class _ChangeRateState extends State<ChangeRate> {
                   ],
                   keyboardType: TextInputType.numberWithOptions(decimal: true),
                   decoration: InputDecoration(
+                    hintText: "New rate",
                     border: InputBorder.none,
                   ),
                   textAlign: TextAlign.center,
@@ -95,6 +97,7 @@ class _ChangeRateState extends State<ChangeRate> {
           myText != null ? (myText as Widget) : Text(""),
         ],
       ),
+      )
     );
   }
 }

@@ -33,7 +33,8 @@ class _CurrencyExchangeState extends State<CurrencyExchange> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFF1E1E1E),
-      body: Center(
+      body: SingleChildScrollView(
+        child: Center(
         child: Column(
           children: [
             SizedBox(
@@ -101,6 +102,7 @@ class _CurrencyExchangeState extends State<CurrencyExchange> {
                 ],
                 keyboardType: TextInputType.numberWithOptions(decimal: true),
                 decoration: InputDecoration(
+                  hintText: "Amount",
                   border: InputBorder.none,
                 ),
                 textAlign: TextAlign.center,
@@ -157,7 +159,8 @@ class _CurrencyExchangeState extends State<CurrencyExchange> {
           ],
         ),
       ),
-    );;
+      )
+    );
   }
 }
 
